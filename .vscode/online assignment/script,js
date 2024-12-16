@@ -1,0 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('rsvpForm');
+    const thankYou = document.getElementById('thankYou');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const attending = document.getElementById('attending').value;
+
+        // Here you would typically send this data to a server
+        console.log('Form submitted:', { name, email, attending });
+
+        // Hide the form and show the thank you message
+        form.style.display = 'none';
+        thankYou.classList.remove('hidden');
+    });
+});
+
